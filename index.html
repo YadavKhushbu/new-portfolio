@@ -356,7 +356,7 @@ hr.band{border:none;border-top:2px solid var(--text)}
 }
 
 a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.photo-wrap{position:absolute;right:82px;bottom:72px;transform:rotate(-4deg);z-index:10;}
+.photo-wrap{display:flex;padding:0;}
 .photo-frame{width:120px;height:120px;border:3px solid var(--text);box-shadow:var(--shadow);overflow:hidden;flex-shrink:0}
 .photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 @media(prefers-reduced-motion:reduce){.sdot{animation:none}*{transition:none!important}}
@@ -688,3 +688,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
     <a href="https://www.geeksforgeeks.org/user/khushbuyadav5610/" target="_blank" rel="noopener" class="fleet">GFG Rank #30</a>
   </div>
 </div>
+<script>
+(function(){
+  var pw = document.querySelector('.photo-wrap');
+  var cluster = document.querySelector('.card-cluster');
+  if (!pw || !cluster) return;
+  pw.style.cssText = 'position:absolute;top:172px;left:100px;transform:rotate(-4deg);z-index:9;';
+  cluster.appendChild(pw);
+})();
+</script>
