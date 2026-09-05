@@ -288,7 +288,7 @@ hr.band{border:none;border-top:2px solid var(--text)}
 }
 .pdesc{font-size:.875rem;color:var(--muted);line-height:1.65;flex:1}
 .pdesc .stat{color:var(--text);font-weight:700;background:var(--accent);padding:0 .18em}
-.pcard-foot{padding:.875rem 1.25rem;border-top:2px solid var(--text)}
+.pcard-foot{padding:.875rem 1.25rem;border-top:2px solid var(--text);display:flex;gap:1.25rem;flex-wrap:wrap}
 .plink{
   font-family:var(--mono);font-size:.62rem;font-weight:500;
   letter-spacing:.07em;text-transform:uppercase;color:var(--text);
@@ -616,6 +616,38 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
           </div>
         </div>
         <div class="pcard-foot"><a href="https://github.com/YadavKhushbu/kumbh_connect" target="_blank" rel="noopener" class="plink">View on GitHub ↗</a></div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-top" style="background:var(--blue)">
+          <span class="pnum">03</span><span style="font-size:1.2rem">🎟️</span>
+        </div>
+        <div class="pcard-body">
+          <h3 class="ptitle">SeatLock</h3>
+          <p class="pdesc">Event ticketing API where a seat is provably never sold twice. Three layers enforce it — a Redis admission gate, ordered Postgres row locks, and a partial unique index — proven by tests that put <span class="stat">200 concurrent threads</span> on a single seat and assert exactly one wins.</p>
+          <div class="chips">
+            <span class="ch">Java 17</span><span class="ch">Spring Boot 3</span><span class="ch">PostgreSQL</span><span class="ch">Redis</span><span class="ch">Testcontainers</span><span class="ch">Docker</span>
+          </div>
+        </div>
+        <div class="pcard-foot">
+          <a href="https://seatlock-jj41.onrender.com" target="_blank" rel="noopener" class="plink">Live demo ↗</a>
+          <a href="https://github.com/YadavKhushbu/SeatLock" target="_blank" rel="noopener" class="plink">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pcard-top" style="background:var(--orange)">
+          <span class="pnum">04</span><span style="font-size:1.2rem">📦</span>
+        </div>
+        <div class="pcard-body">
+          <h3 class="ptitle">OrderFlow</h3>
+          <p class="pdesc">Three Spring Boot microservices fulfilling an order across payment and inventory with <span class="stat">no distributed transaction</span>. A transactional outbox solves the dual-write problem; an orchestrated saga compensates when payment is declined after stock has already been reserved.</p>
+          <div class="chips">
+            <span class="ch">Java 17</span><span class="ch">Apache Kafka</span><span class="ch">Saga Pattern</span><span class="ch">Outbox</span><span class="ch">PostgreSQL</span><span class="ch">Docker</span>
+          </div>
+        </div>
+        <div class="pcard-foot">
+          <a href="https://github.com/YadavKhushbu/OrderFlow#watch-it-compensate" target="_blank" rel="noopener" class="plink">Watch the saga ↗</a>
+          <a href="https://github.com/YadavKhushbu/OrderFlow" target="_blank" rel="noopener" class="plink">GitHub ↗</a>
+        </div>
       </div>
     </div>
   </div>
